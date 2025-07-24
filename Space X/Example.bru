@@ -1,0 +1,25 @@
+meta {
+  name: Example
+  type: http
+  seq: 1
+}
+
+post {
+  url: {{baseUrl}}
+  body: json
+  auth: inherit
+}
+
+headers {
+  content-type: application/json
+}
+
+body:json {
+  {
+    "query": "query ExampleQuery {\n  company {\n    ceo\n  }\n  roadster {\n    apoapsis_au\n  }\n}"
+  }
+}
+
+settings {
+  encodeUrl: false
+}
