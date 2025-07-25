@@ -1,0 +1,19 @@
+meta {
+  name: Athlete Activities
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{baseUrl}}/api/v3/athlete/
+  body: none
+  auth: inherit
+}
+
+headers {
+  Authorization: Bearer ACCESS_TOKEN
+}
+
+settings {
+  encodeUrl: false
+}

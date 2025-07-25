@@ -1,0 +1,22 @@
+meta {
+  name: Grant Access Token
+  type: http
+  seq: 5
+}
+
+post {
+  url: {{baseUrl}}/api/v3/oauth/token
+  body: formUrlEncoded
+  auth: inherit
+}
+
+body:form-urlencoded {
+  client_id: {{clientId}}
+  client_secret: {{clientSecret}}
+  grant_type: refresh_token
+  refresh_token: {{refreshToken}}
+}
+
+settings {
+  encodeUrl: false
+}
